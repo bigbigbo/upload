@@ -1,0 +1,26 @@
+.progress__outer {
+  height: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress__enter {
+  height: inherit;
+  background: rgba(180, 160, 120, 0.1);
+}
+
+.progress__bg {
+  width: 0;
+  height: inherit;
+  border-radius: 4px;
+  background: repeating-linear-gradient(-45deg, #66cea2 25%, #1fc680 0, #1fc680 50%, #66cea2 0, #66cea2 75%, #1fc680 0);
+  background-size: 16px 16px;
+  animation: panoramic 5s linear infinite;
+}
+
+@keyframes panoramic {
+  to {
+    background-position: 200% 0;
+  }
+}

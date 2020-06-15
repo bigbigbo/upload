@@ -1,0 +1,82 @@
+@import '../../styles/variable.less';
+
+@keyframes entry {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 640px;
+  padding-bottom: @gap * 3;
+  background-color: #fff;
+  :local {
+    animation: entry 0.5s ease both;
+  }
+}
+
+.header {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 1px solid @normal-color;
+  box-sizing: border-box;
+}
+
+.title {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+  padding-left: @gap * 3;
+}
+
+.close {
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-top: 14px;
+  margin-right: @gap * 2;
+  cursor: pointer;
+}
+
+.body {
+  padding: @gap;
+  padding-bottom: @gap * 3;
+}
+
+.footer {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  width: 76px;
+  height: 34px;
+  margin-right: 16px;
+  text-align: center;
+  line-height: 34px;
+  background-color: #fff;
+  border: solid 1px @normal-color;
+  color: #5d6575;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(#fff, 5%);
+  }
+}
+
+.button__ok {
+  color: #fff;
+  background-color: @primary-color;
+  border-color: @primary-color;
+
+  &:hover {
+    background-color: darken(@primary-color, 5%);
+  }
+}

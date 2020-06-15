@@ -1,0 +1,154 @@
+@import '../../styles/variable.less';
+
+@keyframes entry {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 640px;
+  height: 496px;
+  background-color: #fff;
+  :local {
+    animation: entry 0.5s ease both;
+  }
+}
+
+.header {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 1px solid @normal-color;
+  box-sizing: border-box;
+}
+
+.title {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+  padding-left: @gap * 3;
+}
+
+.close {
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-top: 14px;
+  margin-right: @gap * 2;
+  cursor: pointer;
+}
+
+.body {
+  position: relative;
+  height: 458px;
+}
+
+.sider {
+  width: 104px;
+  background-color: #f0f0f0;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab {
+  line-height: 36px;
+  text-align: center;
+  font-size: 14px;
+  color: #989ca5;
+  cursor: pointer;
+}
+
+.tab--active {
+  color: @primary-color;
+  background-color: #fff;
+}
+
+.content {
+  padding-left: 104px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  width: 76px;
+  height: 34px;
+  margin-right: 16px;
+  text-align: center;
+  line-height: 34px;
+  background-color: #fff;
+  border: solid 1px @normal-color;
+  color: #5d6575;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(#fff, 5%);
+  }
+}
+
+.button__ok {
+  color: #fff;
+  background-color: @primary-color;
+  border-color: @primary-color;
+
+  &:hover {
+    background-color: darken(@primary-color, 5%);
+  }
+}
+
+/* ======== 搜索框 ======== */
+.search {
+  text-align: center;
+  padding: @gap * 2 0;
+}
+
+.search__label {
+  font-size: 12px;
+  color: #5d6575;
+}
+
+.search__input {
+  width: 378px;
+  height: 26px;
+  background-color: #ffffff;
+  border: solid 1px #d7dde4;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 2px 4px;
+  color: #333;
+}
+
+.search__button {
+  display: inline-block;
+  width: 64px;
+  height: 26px;
+  background-color: @primary-color;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 26px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(@primary-color, 5%);
+  }
+}
